@@ -35,7 +35,7 @@ JOIN film_actor fa ON f.film_id = fa.film_id
 JOIN actor a ON fa.actor_id = a.actor_id
 GROUP BY f.film_id, f.title
 ORDER BY number_of_actors DESC;
-#I really don't know why is it not working
+
 
 -- 7
 SELECT concat(c.first_name, ' ', c.last_name) AS customer_id, COUNT(amount) AS total_paid
@@ -43,7 +43,7 @@ FROM customer c
 JOIN payment p ON c.customer_id = p.customer_id
 GROUP BY c.customer_id
 ORDER BY total_paid DESC;
-#Also here the same problem, it's not working
+
 
 -- 8
 SELECT c.name AS category_name, f.title AS film_title
